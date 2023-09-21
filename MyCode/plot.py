@@ -1,9 +1,9 @@
 '''
 Author: wind-listener 2775174829@qq.com
 Date: 2023-09-19 20:46:58
-LastEditors: wind-listener 2775174829@qq.com
-LastEditTime: 2023-09-20 19:01:49
-FilePath: \PROJECT14_GoodsManagementDuringPandemic\MyCode\plot.py
+LastEditors: zzm 2775174829@qq.com
+LastEditTime: 2023-09-20 20:15:52
+FilePath: \GoodsManagementDuringPandemic\MyCode\plot.py
 Description: 
 
 Copyright (c) 2023 by ${git_name_email}, All Rights Reserved. 
@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 
 # 读取Excel文件
 file_path = "附件1：长春市COVID-19疫情期间病毒感染人数数据.xlsx"
-data = pd.read_excel(file_path)
+data = pd.read_excel(file_path,sheet_name='新增本土感染者')
 
 # 设置日期列为索引
 selected_data = data.iloc[:, 9:]
@@ -33,5 +33,5 @@ plt.legend(loc='upper left')
 plt.grid(True)
 
 # 显示图形
-plt.tight_layout()
+# plt.tight_layout()
 plt.show()
